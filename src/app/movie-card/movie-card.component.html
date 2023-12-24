@@ -1,1 +1,13 @@
-<p>movie-card works!</p>
+<div
+  class="w-full h-full flex flex-col items-start justify-center bg-white font-sans rounded shadow-md"
+>
+  <h4 class="text-2xl p-2 flex w-full items-center justify-center">
+    {{ movie.Title }}
+  </h4>
+  <img [src]="movie.Poster" alt="Movie Poster" />
+  <ol class="list-disc pl-8">
+    <li>imdB Rating: {{ movie.imdbRating }}</li>
+    <li>Genres: {{ movie.Genre }}</li>
+    <li>Writer: {{ movie.Writer }}</li>
+  </ol>
+</div>
