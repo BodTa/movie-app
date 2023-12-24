@@ -3,4 +3,5 @@ export interface Episode{
     Released: Date;
     Title: string;
     imdbRating: string;
+    imdbID: string;
 }

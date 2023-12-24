@@ -11,7 +11,7 @@ export interface Movie{
     Plot: string;
     Language: string;
     Country: string;
-    Awraards: string;
+    Awards: string;
     Poster: string;
     Ratings:{
         Source: string;
@@ -24,6 +24,7 @@ export interface Movie{
     Type:string;
     DVD:Date;
     BoxOffice:string;
-    PRoduction:string;
+    Production:string;
     Website:string;
+    imdbID:string;
 }

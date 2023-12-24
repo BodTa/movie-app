@@ -6,4 +6,5 @@ export interface MovieDto {
  season?: number;
  totalSeasons?: number;
  released?: Date;
+ imdbID?: string;
 }
