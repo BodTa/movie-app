@@ -1,5 +1,24 @@
 <div class="grid grid-cols-4 items-center justify-center gap-2">
-  @for (movie of movies; track $index) {
-    <movie-card [movie]="movie"></movie-card>
+  @if (movie) {
+    <movie-card
+      [title]="movie.Title"
+      [poster]="movie.Poster"
+      [imdbRating]="movie.imdbRating"
+      [released]="movie.Released"
+    ></movie-card>
+  }
+  @if (series) {
+    <movie-card
+      [title]="series.Title"
+      [totalSeasons]="series.totalSeasons"
+    ></movie-card>
+    @for (episode of series.Episodes; track $index) {
+      <movie-card
+        [title]="episode.Title"
+        [imdbRating]="episode.imdbRating"
+        [episode]="episode.Episode"
+        [released]="episode.Released"
+      ></movie-card>
+    }
   }
 </div>
