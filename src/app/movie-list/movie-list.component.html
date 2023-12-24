@@ -1,23 +1,29 @@
 <div class="grid grid-cols-4 items-center justify-center gap-2">
   @if (movie) {
     <movie-card
-      [title]="movie.Title"
-      [poster]="movie.Poster"
-      [imdbRating]="movie.imdbRating"
-      [released]="movie.Released"
+      [dto]="{
+        title: movie.Title,
+        released: movie.Released,
+        imdbRating: movie.imdbRating,
+        poster: movie.Poster
+      }"
     ></movie-card>
   }
   @if (series) {
     <movie-card
-      [title]="series.Title"
-      [totalSeasons]="series.totalSeasons"
+      [dto]="{
+        title: series.Title,
+        totalSeasons: series.totalSeasons
+      }"
     ></movie-card>
     @for (episode of series.Episodes; track $index) {
       <movie-card
-        [title]="episode.Title"
-        [imdbRating]="episode.imdbRating"
-        [episode]="episode.Episode"
-        [released]="episode.Released"
+        [dto]="{
+          title: episode.Title,
+          episode: episode.Episode,
+          released: episode.Released,
+          imdbRating: episode.imdbRating
+        }"
       ></movie-card>
     }
   }

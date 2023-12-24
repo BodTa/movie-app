@@ -2,26 +2,26 @@
   class="w-full h-full flex flex-col items-start justify-center min-h-[30vh] bg-white font-sans rounded shadow-md"
 >
   <h4 class="text-2xl p-2 flex w-full items-center justify-center">
-    {{ title }}
+    {{ dto.title }}
   </h4>
-  @if (poster) {
-    <img [src]="poster" alt="Movie Poster" />
+  @if (dto.poster) {
+    <img [src]="dto.poster" alt="Movie Poster" />
   }
   <ol class="list-disc pl-8">
-    @if (imdbRating) {
-      <li>IMDB Rating: {{ imdbRating }}</li>
+    @if (dto.imdbRating) {
+      <li>IMDB Rating: {{ dto.imdbRating }}</li>
     }
-    @if (episode) {
-      <li>Episode: {{ episode }}</li>
+    @if (dto.episode) {
+      <li>Episode: {{ dto.episode }}</li>
     }
-    @if (totalSeasons) {
-      <li>Total Seasons: {{ totalSeasons }}</li>
+    @if (dto.totalSeasons) {
+      <li>Total Seasons: {{ dto.totalSeasons }}</li>
     }
-    @if (season) {
-      <li>Season: {{ season }}</li>
+    @if (dto.season) {
+      <li>Season: {{ dto.season }}</li>
     }
-    @if (released) {
-      <li>Released: {{ released | date: "short" }}</li>
+    @if (dto.released) {
+      <li>Released: {{ dto.released | date: "short" }}</li>
     }
   </ol>
 </div>
