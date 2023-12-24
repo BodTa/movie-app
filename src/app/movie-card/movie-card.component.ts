@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Movie } from '../shared/modules/Movie';
 
 @Component({
   selector: 'movie-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   templateUrl: './movie-card.component.html',
 })
 export class MovieCardComponent {
-
-}
+  @Input() movie!:Movie;
+} 
