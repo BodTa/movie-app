@@ -8,7 +8,7 @@ export class MovieService {
 
   constructor(private http:HttpClient) { }
 
-  getMoviesWithTitle(title:string){
-    return this.http.get(`${API_URL}t=${title}`)
+  getMoviesWithTitle(title:string, season?:number, episode?:number){
+    return this.http.get(`${API_URL}t=${title}${season ? `&season=${season}` : ''}${episode ? `&episode=${episode}` : ''}`)
   }
 }
