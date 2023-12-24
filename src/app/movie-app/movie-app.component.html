@@ -1,16 +1,31 @@
 <div class="w-screen h-full flex flex-col items-center justify-center">
-  <form (ngSubmit)="$event.preventDefault(); getMoviesViaTitle()">
+  <form
+    (ngSubmit)="$event.preventDefault(); getMoviesViaTitle()"
+    [formGroup]="formGroup"
+  >
     <div class="flex gap-2 p-2">
       <input
         type="text"
         class="shadow rounded outline-none focus:ring-2 focus:ring-blue-400 p-2"
-        [formControl]="title"
+        formControlName="title"
         placeholder="Search for with title"
+      />
+      <input
+        type="text"
+        class="shadow rounded outline-none focus:ring-2 focus:ring-blue-400 p-2"
+        formControlName="season"
+        placeholder="Search for with season"
+      />
+      <input
+        type="text"
+        class="shadow rounded outline-none focus:ring-2 focus:ring-blue-400 p-2"
+        formControlName="episode"
+        placeholder="Search for with episode"
       />
       <button class="p-2 bg-blue-400 rounded shadow" type="submit">
         Search
       </button>
     </div>
   </form>
-  <movie-list [movies]="movies"></movie-list>
+  <movie-list [movie]="movie" [series]="series"></movie-list>
 </div>
