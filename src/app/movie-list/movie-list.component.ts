@@ -13,5 +13,4 @@ import { Episode } from '../shared/modules/Episode';
 export class MovieListComponent {
  @Input() movie?: Movie;
  @Input() series?: Series;
-  @Input() episode?: Episode;
 }
