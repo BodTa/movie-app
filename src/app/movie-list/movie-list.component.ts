@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Movie } from '../shared/modules/Movie';
+import { MovieCardComponent } from "../movie-card/movie-card.component";
 
 @Component({
-  selector: 'app-movie-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './movie-list.component.html',
+    selector: 'movie-list',
+    standalone: true,
+    templateUrl: './movie-list.component.html',
+    imports: [MovieCardComponent]
 })
 export class MovieListComponent {
-
+ @Input() movies!:Movie[];
 }
