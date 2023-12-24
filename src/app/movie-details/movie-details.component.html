@@ -1,0 +1,26 @@
+<div
+  class="w-screen h-screen bg-slate-200 flex justify-center items-center gap-8 p-8"
+>
+  <img class="h-full w-[50%] shadow-xl rounded" [src]="movie.Poster" />
+  <div class="w-[50%] felx flex-col gap-4 items-start justify-center">
+    <h1 class="text-4xl">{{ movie.Title }}</h1>
+    <h2 class="text-2xl">{{ movie.Released | date: "short" }}</h2>
+    <h3 class="text-xl">{{ movie.imdbRating }}</h3>
+    <p><b>Plot:</b> {{ movie.Plot }}</p>
+    <p><b>Actors|Actresses:</b> {{ movie.Actors }}</p>
+    <h3><b>Director:</b> {{ movie.Director }}</h3>
+    <h3><b>Writer:</b> {{ movie.Writer }}</h3>
+    <p><b>Genre:</b> {{ movie.Genre }}</p>
+    <h3><b>Language:</b> {{ movie.Language }}</h3>
+    <h3><b>Country:</b> {{ movie.Country }}</h3>
+    <p><b>Awards:</b> {{ movie.Awards }}</p>
+    <h3><b>Production:</b> {{ movie.Production }}</h3>
+    <h3><b>BoxOffice:</b> {{ movie.BoxOffice }}</h3>
+    <h3><b>Rated:</b> {{ movie.Rated }}</h3>
+    <h3><b>Runtime:</b> {{ movie.Runtime }}</h3>
+    <h3><b>Type:</b> {{ movie.Type }}</h3>
+    <h3><b>Website:</b> {{ movie.Website }}</h3>
+    <h3><b>Metascore:</b> {{ movie.Metascore }}</h3>
+    <h3><b>imdbVotes:</b> {{ movie.imdbVotes }}</h3>
+  </div>
+</div>
