@@ -11,4 +11,8 @@ export class MovieService {
   getMoviesWithTitle(title:string, season?:number, episode?:number){
     return this.http.get(`${API_URL}t=${title}${season ? `&season=${season}` : ''}${episode ? `&episode=${episode}` : ''}`)
   }
+
+  getMoviesWithId(id:string){
+    return this.http.get(`${API_URL}i=${id}`)
+  }
 }

@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Movie } from '../shared/modules/Movie';
-import { Episode } from '../shared/modules/Episode';
 import { DatePipe } from '@angular/common';
 import { MovieDto } from '../shared/modules/MovieDto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'movie-card',
@@ -12,4 +11,10 @@ import { MovieDto } from '../shared/modules/MovieDto';
 })
 export class MovieCardComponent {
   @Input() dto!: MovieDto;
+
+  constructor(private router: Router) { }
+
+  navigateToDetails() {
+    this.router.navigate(['movie-details', this.dto.imdbID]);
+  }
 } 
