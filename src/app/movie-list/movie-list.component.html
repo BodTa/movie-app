@@ -1,1 +1,5 @@
-<p>movie-list works!</p>
+<div class="grid grid-cols-4 items-center justify-center gap-2">
+  @for (movie of movies; track $index) {
+    <movie-card [movie]="movie"></movie-card>
+  }
+</div>
